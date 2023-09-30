@@ -19,5 +19,5 @@ from . import views
 from django.urls import path
 
 urlpatterns = [
-    path('uploadIndex/', views.uploadView, name='uploadIndex'),
+    path('uploadIndex/', views.uploadView),
 ]
