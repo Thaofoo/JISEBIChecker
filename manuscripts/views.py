@@ -1,3 +1,5 @@
 from django.shortcuts import render
 
-# Create your views here.
+def uploadView(request):
+    context = {'message': 'Halo, ini pesan dari view kustom!'}
+    return render(request, 'uploadIndex.html', context)
