@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="manuscripts\templates\static\styles\styleReport.css">
+</head>
+
+<body>
+    <nav class="navbar position-fixed navbar-expand-md bg-light shadow py-1.5 px-3 mb-5 bg-white rounded fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand text-primary" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-arrow-left" viewBox="0 0 16 16" style="margin-right: 10px;">
+                    <path fill-rule="evenodd"
+                        d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+                </svg>
+                Report
+            </a>
+        </div>
+    </nav>
+
+    <div class="container d-flex flex-row  mx-0 px-0 mw-100 bg-body-secondary bg-opacity-50">
+
+        <div class="left-column vh-100 w-50 p-5 overflow-scroll pt-5">
+
+            <div class="report-stats">
+                <div class="chart-container">
+                    <canvas class="my-chart"></canvas>
+                </div>
+
+                <div class="details">
+                    <ul></ul>
+                </div>
+            </div>
+
+            <div class="section mt-3">
+                <div class="sub-title fw-bold">
+                    <p class="chart-heading">80% / 100% checks passed</p>
+                </div>
+
+                <div class="button-report">
+                    <button class="button view">VIEW FULL REPORT</button>
+                    <button class="button-download"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                            fill="#002D7B" class="bi bi-download" viewBox="0 0 16 16">
+                            <path
+                                d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+                            <path
+                                d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+                        </svg></button>
+
+                </div>
+
+
+                <div class="report-box-success shadow mt-3 bg-body-tertiary d-flex flex-row p-0 overflow-hidden">
+
+                    <div class="text my-3" style="margin-left: 20px; color: #0063FF;">
+                        Title of the Paper
+                    </div>
+                    <div class="right-icon align-self-center ms-auto me-3 fs-4 text-success text-opacity-75">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="#ffffff"
+                            style="background-color:#52B288;" class="bi bi-check-lg" viewBox="0 0 16 16">
+                            <path
+                                d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="report-box-success shadow bg-body-tertiary d-flex flex-row p-0 overflow-hidden">
+
+                    <div class="text my-3" style="margin-left: 20px; color: #0063FF;">
+                        Author
+                    </div>
+                    <div class="right-icon align-self-center ms-auto me-3 fs-4 text-success text-opacity-75">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="#ffffff"
+                            style="background-color:#52B288;" class="bi bi-check-lg" viewBox="0 0 16 16">
+                            <path
+                                d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="report-box-success shadow bg-body-tertiary d-flex flex-row p-0 overflow-hidden">
+
+                    <div class="text my-3" style="margin-left: 20px; color: #0063FF;">
+                        Abstract
+                    </div>
+                    <div class="right-icon align-self-center ms-auto me-3 fs-4 text-success text-opacity-75">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="#ffffff"
+                            style="background-color:#52B288;" class="bi bi-check-lg" viewBox="0 0 16 16">
+                            <path
+                                d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="report-box-success shadow bg-body-tertiary d-flex flex-row p-0 overflow-hidden">
+
+                    <div class="text my-3" style="margin-left: 20px; color: #0063FF;">
+                        Introduction
+                    </div>
+                    <div class="right-icon align-self-center ms-auto me-3 fs-4 text-success text-opacity-75">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="#ffffff"
+                            style="background-color:#52B288;" class="bi bi-check-lg" viewBox="0 0 16 16">
+                            <path
+                                d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="report-box-failed shadow  bg-body-tertiary  d-flex flex-row p-0 overflow-hidden">
+
+                    <div class="text my-3" style="margin-left: 20px; color: #0063FF;">
+                        Literature Review
+                    </div>
+                    <div class="right-icon align-self-center ms-auto me-3 fs-4 text-danger text-opacity-75">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="#ffffff" style="background-color:
+                                            #E95551;" class="bi bi-exclamation-lg" viewBox="0 0 16 16">
+                            <path
+                                d="M7.005 3.1a1 1 0 1 1 1.99 0l-.388 6.35a.61.61 0 0 1-1.214 0L7.005 3.1ZM7 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="report-box-failed shadow  bg-body-tertiary  d-flex flex-row p-0 overflow-hidden">
+
+                    <div class="text my-3" style="margin-left: 20px; color: #0063FF;">
+                        Methods
+                    </div>
+                    <div class="right-icon align-self-center ms-auto me-3 fs-4 text-danger text-opacity-75">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="#ffffff" style="background-color:
+                                            #E95551;" class="bi bi-exclamation-lg" viewBox="0 0 16 16">
+                            <path
+                                d="M7.005 3.1a1 1 0 1 1 1.99 0l-.388 6.35a.61.61 0 0 1-1.214 0L7.005 3.1ZM7 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="report-box-failed shadow  bg-body-tertiary  d-flex flex-row p-0 overflow-hidden">
+
+                    <div class="text my-3" style="margin-left: 20px; color: #0063FF;">
+                        Results
+                    </div>
+                    <div class="right-icon align-self-center ms-auto me-3 fs-4 text-danger text-opacity-75">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="#ffffff" style="background-color:
+                                            #E95551;" class="bi bi-exclamation-lg" viewBox="0 0 16 16">
+                            <path
+                                d="M7.005 3.1a1 1 0 1 1 1.99 0l-.388 6.35a.61.61 0 0 1-1.214 0L7.005 3.1ZM7 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="report-box-failed shadow  bg-body-tertiary  d-flex flex-row p-0 overflow-hidden">
+
+                    <div class="text my-3" style="margin-left: 20px; color: #0063FF;">
+                        Discussion
+                    </div>
+                    <div class="right-icon align-self-center ms-auto me-3 fs-4 text-danger text-opacity-75">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="#ffffff" style="background-color:
+                                            #E95551;" class="bi bi-exclamation-lg" viewBox="0 0 16 16">
+                            <path
+                                d="M7.005 3.1a1 1 0 1 1 1.99 0l-.388 6.35a.61.61 0 0 1-1.214 0L7.005 3.1ZM7 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z" />
+                        </svg>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <div class="section mt-3">
+                <div class="sub-title" style="color: #898383;">
+                    Checking refers to JISEBI rules
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="right-column w-50 d-flex p-5 vh-100">
+
+            <div class="text-container align-self-center bg-white p-5 rounded-4 overflow-scroll h-100">
+
+                <h2 class="journal-title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+                <p class="journal-authors">
+                    T. Ellender, J.Harwood*, P.Kosilla*, P.Bolam
+                </p>
+                <p>* contributed equally.</p>
+                <p>Anatomical Neuropharmacology Unit</p>
+                <p>Keywords: thalamus, striatum</p>
+
+                <h4>Abstract</h4>
+                <p class="journal-content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores fugit corporis amet impedit esse
+                    sed
+                    laudantium vitae corrupti. Possimus iste soluta, alias itaque quis cumque recusandae id voluptatem
+                    nulla
+                    autem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ex quidem harum adipisci,
+                    aliquam
+                    eveniet doloremque non minus facilis ut vero, officiis ad molestiae ea obcaecati labore consequuntur
+                    consequatur esse quae et qui enim odio. Eaque, expedita vero, voluptatum aut facere at consequuntur
+                    necessitatibus in animi, quos minus qui cumque eligendi. Pariatur atque accusantium, ex consectetur
+                    sapiente
+                    nulla ad deleniti corrupti eos nobis id minima tenetur excepturi dolorem, consequatur ipsa facere
+                    odio maiores
+                    doloremque iusto. Pariatur temporibus, eum numquam sapiente voluptate culpa error voluptates dolorem
+                    voluptatibus nesciunt! Libero, perspiciatis fugit! Rem illum quae rerum, enim recusandae adipisci
+                    voluptatem
+                    dolor asperiores sapiente? Cupiditate, ducimus? Animi, expedita inventore. Eligendi reiciendis
+                    repellendus ex
+                    exercitationem ut tempore illo, laborum velit numquam quaerat cupiditate, consectetur doloremque
+                    alias
+                    impedit, modi cum itaque aliquam voluptatem iusto. Voluptatem maxime consequatur fugiat. Quod
+                    commodi dolorem
+                    similique atque dolores perspiciatis voluptas iusto ullam debitis? Corporis, soluta sequi!
+                </p>
+
+                <h4>Introduction</h4>
+                <p class="journal-content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores fugit corporis amet impedit esse
+                    sed
+                    laudantium vitae corrupti. Possimus iste soluta, alias itaque quis cumque recusandae id voluptatem
+                    nulla
+                    autem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ex quidem harum adipisci,
+                    aliquam
+                    eveniet doloremque non minus facilis ut vero, officiis ad molestiae ea obcaecati labore consequuntur
+                    consequatur esse quae et qui enim odio. Eaque, expedita vero, voluptatum aut facere at consequuntur
+                    necessitatibus in animi, quos minus qui cumque eligendi. Pariatur atque accusantium, ex consectetur
+                    sapiente
+                    nulla ad deleniti corrupti eos nobis id minima tenetur excepturi dolorem, consequatur ipsa facere
+                    odio maiores
+                    doloremque iusto. Pariatur temporibus, eum numquam sapiente voluptate culpa error voluptates dolorem
+                    voluptatibus nesciunt! Libero, perspiciatis fugit! Rem illum quae rerum, enim recusandae adipisci
+                    voluptatem
+                    dolor asperiores sapiente? Cupiditate, ducimus? Animi, expedita inventore. Eligendi reiciendis
+                    repellendus ex
+                    exercitationem ut tempore illo, laborum velit numquam quaerat cupiditate, consectetur doloremque
+                    alias
+                    impedit, modi cum itaque aliquam voluptatem iusto. Voluptatem maxime consequatur fugiat. Quod
+                    commodi dolorem
+                    similique atque dolores perspiciatis voluptas iusto ullam debitis? Corporis, soluta sequi!
+                </p>
+
+                <h4>Methods and Materials</h4>
+                <p class="journal-content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores fugit corporis amet impedit esse
+                    sed
+                    laudantium vitae corrupti. Possimus iste soluta, alias itaque quis cumque recusandae id voluptatem
+                    nulla
+                    autem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ex quidem harum adipisci,
+                    aliquam
+                    eveniet doloremque non minus facilis ut vero, officiis ad molestiae ea obcaecati labore consequuntur
+                    consequatur esse quae et qui enim odio. Eaque, expedita vero, voluptatum aut facere at consequuntur
+                    necessitatibus in animi, quos minus qui cumque eligendi. Pariatur atque accusantium, ex consectetur
+                    sapiente
+                    nulla ad deleniti corrupti eos nobis id minima tenetur excepturi dolorem, consequatur ipsa facere
+                    odio maiores
+                    doloremque iusto. Pariatur temporibus, eum numquam sapiente voluptate culpa error voluptates dolorem
+                    voluptatibus nesciunt! Libero, perspiciatis fugit! Rem illum quae rerum, enim recusandae adipisci
+                    voluptatem
+                    dolor asperiores sapiente? Cupiditate, ducimus? Animi, expedita inventore. Eligendi reiciendis
+                    repellendus ex
+                    exercitationem ut tempore illo, laborum velit numquam quaerat cupiditate, consectetur doloremque
+                    alias
+                    impedit, modi cum itaque aliquam voluptatem iusto. Voluptatem maxime consequatur fugiat. Quod
+                    commodi dolorem
+                    similique atque dolores perspiciatis voluptas iusto ullam debitis? Corporis, soluta sequi!
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi sed, voluptate, corporis
+                    perspiciatis consectetur a ex, minus id perferendis dignissimos natus! Libero mollitia magni at sed,
+                    autem odio velit. Sit, repudiandae laudantium a aperiam neque exercitationem porro numquam quae
+                    recusandae facilis totam ut odio? Ipsam, atque omnis saepe doloremque aliquam, optio sequi illum
+                    consequuntur pariatur porro necessitatibus, magnam enim? Veritatis consequuntur, voluptatum odit
+                    labore nobis inventore velit commodi tenetur accusantium delectus voluptas incidunt, dolor
+                    blanditiis dolorem sint quaerat distinctio esse. Suscipit, doloremque sit eaque possimus pariatur
+                    consequuntur totam laudantium, accusamus quos consectetur facere debitis id itaque quae ducimus
+                    voluptatem nostrum quidem deserunt necessitatibus nisi illo, natus rem asperiores eligendi.
+                    Cupiditate optio ipsum atque unde, aut, tempora harum consectetur nulla aperiam recusandae corrupti?
+                    Non consectetur, magnam optio quod cupiditate impedit quo reiciendis facilis aspernatur labore
+                    voluptates, blanditiis, sunt culpa deleniti rem explicabo provident et voluptas! Praesentium odit
+                    rerum suscipit sequi quis impedit molestiae nisi quam quibusdam sunt, reiciendis, neque aperiam
+                    saepe quaerat dolor blanditiis dolores ipsa nihil natus quia at ipsum voluptas. Eveniet
+                    reprehenderit ab quos doloremque, saepe repellendus, modi deserunt nam aperiam reiciendis, quae
+                    eius. Ab vitae esse provident pariatur quisquam veniam beatae deleniti quos praesentium possimus
+                    tenetur atque molestias omnis vero harum dolore facere, quis magni commodi corporis dicta soluta!
+                    Animi odit saepe minima dicta repellat, hic ducimus molestiae officiis iusto assumenda, aspernatur
+                    asperiores exercitationem enim sit ratione, facere voluptates quisquam totam odio nulla perspiciatis
+                    dolore explicabo! Praesentium eligendi similique voluptatibus magni fuga, excepturi sapiente quis,
+                    accusamus iusto repellendus dolore nobis quisquam nam fugit corrupti iste! Totam dolore repellat
+                    inventore, consectetur a hic fuga. Omnis consectetur impedit blanditiis veniam unde nam quos dolore
+                    deserunt, asperiores dolorum natus eligendi ab magnam labore ad, voluptates rem nesciunt? Error
+                    consectetur fuga et doloremque sequi. Deserunt magni suscipit nostrum deleniti culpa cupiditate
+                    ratione voluptates fugit, quos sit. Dignissimos rerum excepturi optio eos mollitia aspernatur
+                    accusamus sint perspiciatis modi tempore, magni, voluptatibus corrupti deserunt aperiam. Qui eos
+                    praesentium numquam magnam, doloribus beatae quos doloremque rerum laboriosam deleniti saepe porro
+                    expedita. Tempore error vel sunt debitis optio veniam? Nobis ad ab quae quos omnis aperiam deleniti
+                    est! Quaerat, in? Est ea exercitationem officia hic maxime iste voluptatem itaque cupiditate ipsam
+                    facere eius odio assumenda adipisci minus temporibus, vero deserunt reiciendis nobis corrupti
+                    quaerat vel unde magnam. Rerum explicabo ab nulla doloribus saepe adipisci corporis voluptate
+                    molestiae officia? Architecto, cumque ut expedita dolore exercitationem veritatis! Mollitia
+                    distinctio beatae debitis nemo veritatis atque optio nostrum sint excepturi dolor asperiores,
+                    cumque, tenetur, rerum quo commodi nisi! Numquam iusto quaerat nobis eos, mollitia, velit
+                    necessitatibus doloremque voluptas minus consectetur accusantium. Ipsum eius dolor quos enim
+                    reiciendis quis ipsam fugit eum odit nesciunt, maxime tenetur consequatur sapiente repellendus eos
+                    quisquam laboriosam autem dolorum aliquam corrupti neque ea modi. Repudiandae repellendus explicabo
+                    assumenda provident sequi odit hic, expedita repellat quos fugit nihil temporibus sunt natus atque
+                    consequuntur alias dolores ducimus harum quisquam unde quasi sapiente vitae voluptates esse!
+                    Distinctio, rerum veniam quas non hic impedit sapiente ducimus at nesciunt fugiat deleniti!
+
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer style="background-color: #013999; color: #fff; text-align: center; ">
+        <!-- <p>&copy; 2023 Automatic Manuscript Checker</p> -->
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="manuscripts\templates\static\js\jquery.js">
+    <link rel="stylesheet" href="manuscripts\templates\static\js\popper.js">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="manuscripts\templates\static\js\main.js">
+</body>
+
+</html>
