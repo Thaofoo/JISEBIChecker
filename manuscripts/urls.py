@@ -21,8 +21,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('uploadIndex/', views.uploadView),  
+    path('uploadIndex/', views.uploadView),
+    path("full-report", views.full_report, name="full-report")
 ]
 
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
