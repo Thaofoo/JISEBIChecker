@@ -20,4 +20,6 @@ from django.urls import path
 
 urlpatterns = [
     path('uploadIndex/', views.uploadView),
+    path("full-report", views.full_report, name="full-report")
 ]
+
