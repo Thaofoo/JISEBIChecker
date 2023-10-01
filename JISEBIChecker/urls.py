@@ -19,4 +19,5 @@ from django.urls import include, path
 
 urlpatterns = [
     path('manuscripts/', include('manuscripts.urls'))
+    
 ]
