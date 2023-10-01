@@ -1,5 +1,8 @@
 from django.shortcuts import render
 
-# Create your views here.
+def uploadView(request):
+    return render(request, 'uploadIndex.html')
+
 def full_report(request):
     return render(request, "full_report.html")
+
