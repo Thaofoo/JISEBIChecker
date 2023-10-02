@@ -20,8 +20,8 @@
                           <a class="navbar-brand" href="#">ManuCheck.top</a>
                           <div class="ml-auto">
                                     <form class="form-inline my-2 my-lg-0 ml-auto">
-                                                <button class="btn btn-outline-success mr-sm-2 custom-login-button" type="submit">Login</button>
-                                                <button class="btn my-2 my-sm-0 custom-signup-button" type="submit">Sign up</button>
+                                                <a href="{% url 'login' %}"><div class="btn btn-outline-success mr-sm-2 custom-login-button">Login</div></a>
+                                                <a href="{% url 'register' %}"><div class="btn my-2 my-sm-0 custom-signup-button">Sign up</div></a>
                                       </form>
                             </a>
                           </div>
@@ -46,7 +46,7 @@
                             <img src="/static/base/images/homepage.png" alt="Gambar Landing Page" width="400" height="250">
             </div>
 
-            <button class="btn my-2 my-sm-0 start-button" type="submit">Start now!</button>
+            <a href="{% url 'login' %}"><button class="btn my-2 my-sm-0 start-button">Start now!</button></a>
 
 
 

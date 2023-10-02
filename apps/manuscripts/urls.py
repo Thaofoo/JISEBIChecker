@@ -6,6 +6,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('upload/', views.upload, name="upload"),
-    path("full-report", views.full_report, name="full-report")
+    path("full-report", views.full_report, name="full-report"),
+    path("report", views.report, name="report")
 ]
 
