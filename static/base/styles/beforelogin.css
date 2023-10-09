@@ -5,6 +5,10 @@
 
 }
 
+.text-blue{
+    color: #002D7B !important;
+}
+
 .custom-signup-button {
             background-color: #0063FF; /* Ganti dengan kode warna latar belakang yang Anda inginkan */
             color: white; /* Warna teks pada tombol */
