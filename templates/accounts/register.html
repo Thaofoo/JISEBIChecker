@@ -3,28 +3,53 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ManuCheck Registration</title>
     <link rel="stylesheet" href="/static/base/styles/login.css" />
+    <title>Create your Account</title>
   </head>
 
   <body>
-    <div class="container">
-      <h1>Register</h1>
-      <form action="#" method="post">
-        <div class="form-group">
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
-        </div>
-        <div class="form-group">
-          <label for="username">Username:</label>
-          <input type="text" id="username" name="username" required />
-        </div>
-        <div class="form-group">
-          <label for="password">Password:</label>
-          <input type="password" id="password" name="password" required />
-        </div>
-        <button type="submit" class="btn-register">Register</button>
-      </form>
+    <div class="login-container">
+      <div class="login-box">
+        <h2>Create an Account</h2>
+        <form action="" method="post">
+          {% csrf_token %}
+          <input
+            type="text"
+            class="login-input"
+            placeholder="Username"
+            name="username"
+            id="username"
+            required
+          />
+          <input
+            type="text"
+            class="login-input"
+            placeholder="E-mail"
+            name="email"
+            id="email"
+            required
+          />
+          <input
+            type="password"
+            class="login-input"
+            placeholder="Password"
+            name="password1"
+            id="password1"
+            required
+          />
+          <input
+            type="password"
+            class="login-input"
+            placeholder="Re-type password"
+            name="password2"
+            id="password2"
+            required
+          />
+          <a href="{% url "login" %}">Have an Account?</a>
+          <button type="submit" class="login-button">Login</button>
+          <button type="button" class="google-btn">Sign in with Google</button>
+        </form>
+      </div>
     </div>
   </body>
 </html>
